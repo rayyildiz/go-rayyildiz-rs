@@ -1,0 +1,9 @@
+.idea/
+*.iml
+app
+tmp/
+.env
+target/
+taxrates.db-shm
+taxrates.db-wal
+__MACOSX
