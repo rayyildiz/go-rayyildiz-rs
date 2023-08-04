@@ -11,4 +11,19 @@ Use this command to build binary. If you don't want to deploy to arm, just remov
 cargo lambda build --release --arm64
 ```
 
-Then simply compress and upload the `./target/lambda/go-rayyildiz-rs/bootstrop` file.
+Then simply compress `./target/lambda/go-rayyildiz-rs/bootstrop` and upload the archived file.
+
+
+## Testing
+
+Run this command to start lambda emulator:
+
+```shell
+cargo lambda watch
+```
+
+And send a sample request by using this command:
+```shell
+ cargo lambda invoke --data-ascii "{}" 
+```
+
