@@ -2,7 +2,12 @@
 name = "go-rayyildiz-rs"
 version = "0.1.0"
 edition = "2021"
-
+readme = "README.md"
+license-file = "LICENSE"
+authors = ["Ramazan AYYILDIZ"]
+homepage = "https://ob5jrkbljxjymoohr7qt42tl2y0otrln.lambda-url.eu-west-1.on.aws/"
+repository = "https://github.com/rayyildiz/go-rayyildiz-rs"
+keywords  = ["demo","aws_lambda"]
 
 [dependencies]
 lambda_http = "0.8.1"

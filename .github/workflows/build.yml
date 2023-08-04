@@ -9,7 +9,6 @@ env:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     steps:
@@ -29,7 +28,11 @@ jobs:
 
     - run: cargo install cargo-lambda
 
-    - run: cargo lambda build --release --arm64
-
     - run: cargo check
 
+    - run: cargo lambda build --release --arm64
+
+    - uses: actions/upload-artifact@v3
+      with:
+        name: bootstrap
+        path: target/lambda/go-rayyildiz-rs/
