@@ -15,6 +15,18 @@ jobs:
     steps:
     - uses: actions/checkout@v3
 
+    - uses: actions/cache@v3
+      with:
+        path: |
+          ~/.cargo/bin/
+          ~/.cargo/registry/index/
+          ~/.cargo/registry/cache/
+          ~/.cargo/git/db/
+          target/
+        key: ${{ runner.os }}-cargo-${{ hashFiles('**/Cargo.lock') }}
+
+    - run: pip install ziglang
+
     - run: cargo install cargo-lambda
 
     - run: cargo lambda build --release --arm64
