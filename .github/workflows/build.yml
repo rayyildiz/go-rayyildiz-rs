@@ -26,7 +26,8 @@ jobs:
 
     - run: pip install ziglang
 
-    - run: cargo install cargo-lambda --force
+    - run: cargo install cargo-lambda
+      continue-on-error: true
 
     - run: cargo check
 
